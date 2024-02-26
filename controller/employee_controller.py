@@ -23,3 +23,13 @@ def updateemployee():
 @app.route("/employee/delete/<id>", methods=["DELETE"])
 def deleteemployee(id):
     return emp.delete_employee(id);
+
+
+@app.route("/employee/patch/<id>", methods=["PATCH"])
+def patch_employee(id):
+    return emp.patch_employee(request, id)
+
+
+@app.route("/employee/getall/limit/<limit>/page/<page>")
+def get_paginated(limit, page):
+    return emp.get_paginated_data(limit, page)
