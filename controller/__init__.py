@@ -1,1 +1,1 @@
-__all__=["employee_controller"]
+__all__=["employee_controller", "user_controller"]
